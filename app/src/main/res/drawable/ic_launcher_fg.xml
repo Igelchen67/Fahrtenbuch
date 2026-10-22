@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Buch mit Zeilen und Straße -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M36,30 L72,30 L72,78 L36,78 Z" />
+    <path android:fillColor="#1565C0"
+        android:pathData="M42,38 L66,38 L66,41 L42,41 Z M42,46 L66,46 L66,49 L42,49 Z M42,54 L66,54 L66,57 L42,57 Z M42,62 L58,62 L58,65 L42,65 Z" />
+    <path android:fillColor="#FFB300"
+        android:pathData="M36,30 L40,30 L40,78 L36,78 Z" />
+</vector>

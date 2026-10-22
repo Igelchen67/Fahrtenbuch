@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'de.eedesign.fahrtenbuch'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'de.eedesign.fahrtenbuch'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('fahrtenbuch.jks')
+            storeType 'pkcs12'
+            storePassword 'CixpOzE1y8Ngw807CSzF'
+            keyAlias 'fahrtenbuch'
+            keyPassword 'CixpOzE1y8Ngw807CSzF'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Fahrtenbuch-${variant.versionName}.apk"
+        }
+    }
+}
